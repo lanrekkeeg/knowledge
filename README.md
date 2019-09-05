@@ -1,5 +1,5 @@
 
-# [Personal Knowledge](https://miwurster.gitbook.io/wiki)
+# [Personal Knowledge](https://wiki.miwurster.com)
 
 This is my personal wiki 📚 where I share everything I know about this world.
 
