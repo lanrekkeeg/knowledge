@@ -7,5 +7,5 @@
   - [Kubernetes](cs/kubernetes.md)
   - [Latex](cs/latex.md)
   - [Software Architecture](cs/software-architecture.md)
-- [Health](health)
-- [Writing](writing)
+- [Health](health/index.md)
+- [Writing](writing/index.md)
