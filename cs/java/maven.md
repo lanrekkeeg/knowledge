@@ -20,10 +20,16 @@ mvn -T 1.5C clean install  # will use 1.5 thread per CPU core
 
 So just cd into the parent directory and run:
 
-`mvn clean install -pl <module> -am`
+```shell
+mvn clean install -pl <module> -am
+```
 
-## Skip test
+## Random notes
 
 ```shell
+# skip tests ;-)
 mvn clean install -DskipTests
+
+# force to update dependencies
+mvn clean package -U
 ```
