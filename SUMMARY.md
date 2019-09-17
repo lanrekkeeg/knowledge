@@ -17,5 +17,5 @@
     - [Linux](cs/tools/linux.md)
     - [MySQL](cs/tools/mysql.md)
     - [Ubuntu](cs/tools/ubuntu.md)
-- [Health](health/index.md)
-- [Writing](writing/index.md)
+- [Health](health.md)
+- [Writing](writing.md)
