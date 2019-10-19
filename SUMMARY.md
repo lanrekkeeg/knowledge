@@ -16,6 +16,7 @@
     - [Latex](cs/tools/latex.md)
     - [Linux](cs/tools/linux.md)
     - [MySQL](cs/tools/mysql.md)
+    - [Powerline](cs/tools/powerline.md)
     - [Ubuntu](cs/tools/ubuntu.md)
 - [Health](health.md)
 - [Writing](writing.md)
