@@ -3,6 +3,7 @@
 
 - [Computer Science](cs)
   - [Agile Software Engineering](cs/agile.md)
+  - [Fonts](cs/fonts.md)
   - [Graphs](cs/graphs.md)
   - [Java](cs/java)
     - [Maven](cs/java/maven.md)
