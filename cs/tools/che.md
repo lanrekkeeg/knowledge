@@ -6,7 +6,7 @@
 Prerequisites: `kubectl`, `helm`, `minikube`, and `chectl` installed.
 
 ```shell
-minikube start --cpus 2 --memory 4096 --vm-driver=hyperv
+minikube start --cpus 2 --memory 4096 --vm-driver=hyperv --kubernetes-version=v1.11.10
 minikube ip
 chectl server:start --platform=minikube --domain=<minikube ip>.nip.io
 ```
