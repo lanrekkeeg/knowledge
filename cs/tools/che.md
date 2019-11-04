@@ -1,7 +1,21 @@
 
 # Eclipse Che
 
-## Install Eclipse Che on Kubernetes using `minikube` (Windows/HyperV)
+## Install locally using `minikube` and `chectl` (Windows/HyperV)
+
+Prerequisites: `kubectl`, `helm`, `minikube`, and `chectl` installed.
+
+```shell
+minikube start --cpus 2 --memory 4096 --vm-driver=hyperv
+minikube ip
+chectl server:start --platform=minikube --domain=<minikube ip>.nip.io
+```
+
+Wait until `curl <minikube_ip_address>.nip.io` resolves.
+Start a browser and hit `http://<minikube_ip_address>.nip.io`.
+
+
+## Deprecated: Install locally `minikube` (Windows/HyperV)
 
 Prerequisites: `kubectl`, `helm`, and `minikube` installed.
 
