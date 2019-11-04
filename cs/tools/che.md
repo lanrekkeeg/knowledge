@@ -5,9 +5,29 @@
 
 Prerequisites: `kubectl`, `helm`, `minikube`, and `chectl` installed.
 
+Start a Kubernetes cluster:
+
 ```shell
-minikube start --cpus 2 --memory 4096 --vm-driver=hyperv --kubernetes-version=v1.11.10
+minikube start --cpus 2 --memory 4096 --vm-driver=hyperv --kubernetes-version=v1.11.10 --extra-config=apiserver.authorization-mode=RBAC
+```
+
+Prepare cluster:
+
+```shell
+kubectl create serviceaccount tiller --namespace kube-system
+kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default
+kubectl create clusterrolebinding tiller-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+```
+
+Determine IP Address:
+
+```shell
 minikube ip
+```
+
+Start Che server:
+
+```shell
 chectl server:start --platform=minikube --domain=<minikube ip>.nip.io
 ```
 
