@@ -3,7 +3,7 @@
 
 ## Search File Content Recursively
 
-```shell
+```
 grep -rin "foo" .
 find . -type f | xargs grep -in "PSQLException"
 ```
@@ -12,7 +12,7 @@ find . -type f | xargs grep -in "PSQLException"
 
 To remove multiple files such as *.jpg or *.sh with one command find, use
 
-```shell
+```
 find . -name "FILE-TO-FIND"-exec rm -rf {} \;
 # or
 find . -type f -name "FILE-TO-FIND" -exec rm -f {} \;
@@ -22,7 +22,7 @@ The only difference between above two syntax is that first command can remove di
 
 More Examples of find command
 
-```shell
+```
 # Find all files having .bak (*.bak) extension in current directory and remove them:
 find . -type f -name "*.bak" -exec rm -f {} \;
 
@@ -41,7 +41,7 @@ find . -name "*.exe" | grep -o '.*/' | sort | uniq
 
 ## Create symbolic links (symlink)
 
-```shell
+```
 ln -s [source] [target{optional}]
 ln -s <directory> <name>
 ln -s /var/log/error.log /tmp/log.log
@@ -66,13 +66,13 @@ wget http://username:password@host.acme.com/path/to/file.tar.gz
 
 Use URLs from file:
 
-```shell
+```
 wget -i /tmp/download.txt
 ```
 
 ## Network stats (netstat)
 
-```shell
+```
 netstat -tulpen
 netstat -taupen
 
@@ -82,14 +82,14 @@ sudo lsof -n -iTCP:[PORT] | grep LISTEN
 
 ## List processes (ps)
 
-```shell
+```
 ps aux | less
 ps aux | grep ...
 ```
 
 ## Using mail
 
-```shell
+```
 # Sending simple text
 echo "This is my text" | mail -s "This is a subject" mwurster@hp.com
 
@@ -101,13 +101,13 @@ mail -s "mail with file content" mwurster@hp.com < /path/to/file.txt
 
 To extract one or more members from an archive, enter:
 
-```shell
+```
 tar -zxvf {file.tar.gz}
 ```
 
 ## Force DHCP to renew IP address
 
-```shell
+```
 sudo dhclient -r
 sudo dhclient
 ```
@@ -117,13 +117,13 @@ sudo dhclient
 The `/etc/sudoers` file can only be edited with `visudo`.
 You can set an alternative text editor:
 
-```shell
+```
 sudo update-alternatives --config editor
 ```
 
 Now open the `sudoers` file:
 
-```shell
+```
 sudo visudo -f /etc/sudoers
 ```
 
@@ -147,13 +147,13 @@ For a group:
 
 ## Generate directory tree structure
 
-```shell
+```
 find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" > tree.txt
 ```
 
 ## ISO Mount
 
-```shell
+```
 mkdir /mnt/isofile
 mount -o loop -t iso9660 <file>.iso /mnt/isofile
 umount /mnt/isofile
@@ -163,7 +163,7 @@ umount /mnt/isofile
 
 `smbfs` package must be installed.
 
-```shell
+```
 mount -t cifs -o username=wurstmic,workgroup=emea //veno.deu.hp.com/d_drive$ /mnt/veno/
 mount -t cifs -o username=share,workgroup=veno //veno.deu.hp.com/public /mnt/veno/
 mount -t cifs -o username=administrator,workgroup=ia3 //ia3.mambo.net/c$ /mnt/ia3
@@ -171,7 +171,7 @@ mount -t cifs -o username=administrator,workgroup=ia3 //ia3.mambo.net/c$ /mnt/ia
 
 ## Red Hat Package Management
 
-```shell
+```
 rpm -qa
 rpm -qa | grep <package>
 ```
@@ -184,7 +184,7 @@ Go to `/etc/selinux/config` and set `SELINUX` to `disabled`
 
 Append below lines in `/etc/sysctl.conf`:
 
-```shell
+```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 ```

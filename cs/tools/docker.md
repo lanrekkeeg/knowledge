@@ -3,7 +3,7 @@
 
 ## Docker Easy Installation
 
-```shell
+```
 curl -sSL https://get.docker.com | sudo sh
 ```
 

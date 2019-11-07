@@ -5,7 +5,7 @@
 
 Create a cluster:
 
-```shell
+```
 minikube delete
 minikube start --cpus 2 --memory 4096 \
     --vm-driver=hyperv [--hyperv-virtual-switch="Primary Virtual Switch"] \
@@ -14,13 +14,13 @@ minikube start --cpus 2 --memory 4096 \
 
 Check if everything is up and running:
 
-```shell
+```
 kubectl get pods -n kube-system
 ```
 
 Show `minikube` dashbaord:
 
-```shell
+```
 minikube dashboard
 ```
 

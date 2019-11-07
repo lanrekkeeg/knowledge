@@ -84,7 +84,7 @@ Both of these commands are designed to integrate changes from one branch into an
 
 ### Checkout a feature branch and merge the current master
 
-```shell
+```
 git checkout feature
 git merge master
 ```
@@ -100,7 +100,7 @@ Always ask yourself, "Is anyone else looking at this branch?"
 If the answer is yes, take your hands off the keyboard and start thinking about a non-destructive way to make your changes (e.g., the `git revert` command).
 Otherwise, you're safe to re-write history as much as you like.
 
-```shell
+```
 git checkout feature
 git rebase master
 ```
@@ -114,7 +114,7 @@ You get a much cleaner history, no merge commits and a perfectly linear project 
 Interactive rebasing gives you the opportunity to alter commits as they are moved to the new branch.
 Typically, use it to clean up a messy history before merging a feature branch into master.
 
-```shell
+```
 git checkout feature
 git rebase -i master
 ```
@@ -143,7 +143,7 @@ That way, if you accidentally mess up your feature's history, you can check out 
 
 For example:
 
-```shell
+```
 git checkout feature
 git checkout -b temporary-branch
 git rebase -i master
@@ -154,7 +154,7 @@ git merge temporary-branch
 
 ### Rebasing a Remote Branch
 
-```shell
+```
 git checkout feature
 git pull --rebase origin master
 git push origin feature -f
@@ -164,7 +164,7 @@ git push origin feature -f
 
 Put the following to your `.gitconfig` file:
 
-```shell
+```
 [http]
   proxy = http://your-proxy-server.com:8088
 [https]
