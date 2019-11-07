@@ -19,6 +19,6 @@
     - [MySQL](cs/tools/mysql.md)
     - [Powerline](cs/tools/powerline.md)
     - [Ubuntu](cs/tools/ubuntu.md)
-    - [windows](cs/tools/windows.md)
+    - [Windows](cs/tools/windows.md)
 - [Health](health.md)
 - [Writing](writing.md)
