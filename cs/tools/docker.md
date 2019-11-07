@@ -9,7 +9,7 @@ curl -sSL https://get.docker.com | sudo sh
 
 ## Tipps and Tricks
 
-```shell
+```
 # Show log output
 docker logs <container>
 
