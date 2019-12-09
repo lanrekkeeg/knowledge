@@ -169,24 +169,20 @@ mount -t cifs -o username=share,workgroup=veno //veno.deu.hp.com/public /mnt/ven
 mount -t cifs -o username=administrator,workgroup=ia3 //ia3.mambo.net/c$ /mnt/ia3
 ```
 
-## Red Hat Package Management
+## Disable firewall
 
 ```
-rpm -qa
-rpm -qa | grep <package>
+sudo iptables -F
 ```
 
-## [RHEL] Disable SELinux
-
-Go to `/etc/selinux/config` and set `SELINUX` to `disabled`
-
-## [RHEL] Disable IPv6
+## Disable IPv6
 
 Append below lines in `/etc/sysctl.conf`:
 
 ```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
 ```
 
 To make the settings affective, execute `sysctl -p`
@@ -230,3 +226,14 @@ Use HTTP_PROXY variable in front of your command call:
 ```
 HTTP_PROXY=<proxy> php composer.phar self-update
 ```
+
+## Red Hat Package Management
+
+```
+rpm -qa
+rpm -qa | grep <package>
+```
+
+## Disable SELinux
+
+Go to `/etc/selinux/config` and set `SELINUX` to `disabled`
