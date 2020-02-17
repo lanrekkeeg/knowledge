@@ -62,12 +62,20 @@ git config --global credential.helper store
 
 ## Fix Git LFS Issues
 
-> Fix "Encountered 1 file(s) that should have been pointers, but weren't" issue, see <https://github.com/git-lfs/git-lfs/issues/2910>.
+### Fix "Encountered 1 file(s) that should have been pointers, but weren't" issue
+
+See <https://github.com/git-lfs/git-lfs/issues/2910>
 
 ```
 git rm --cached <file>
 git add --force <file>
 git commit -m "Move files properly to GitLFS"
+```
+
+### Fix "batch request: missing protocol: ..."
+
+```
+git checkout -f HEAD
 ```
 
 ## Reset vs. Revert
