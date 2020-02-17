@@ -24,4 +24,7 @@ docker rm $(docker ps -aq)
 
 # Delete all images
 docker rmi -f $(docker images -q)
+
+# Verify volume mount
+docker run -v c:/Users:/data alpine ls /data
 ```
