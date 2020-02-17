@@ -54,6 +54,12 @@ git checkout -b my_new_name
 git push origin my_new_name
 ```
 
+## Store Credentials
+
+```
+git config --global credential.helper store
+```
+
 ## Fix Git LFS Issues
 
 > Fix "Encountered 1 file(s) that should have been pointers, but weren't" issue, see <https://github.com/git-lfs/git-lfs/issues/2910>.
