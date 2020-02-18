@@ -76,6 +76,7 @@ git commit -m "Move files properly to GitLFS"
 
 ```
 git checkout -f HEAD
+git lfs fetch
 ```
 
 ## Reset vs. Revert
