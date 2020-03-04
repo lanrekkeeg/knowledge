@@ -60,9 +60,9 @@ git push origin my_new_name
 git config --global credential.helper store
 ```
 
-## Fix Git LFS Issues
+## Git LFS
 
-### Fix "Encountered 1 file(s) that should have been pointers, but weren't" issue
+### Fix Issue "Encountered 1 file(s) that should have been pointers, but weren't"
 
 See <https://github.com/git-lfs/git-lfs/issues/2910>
 
@@ -72,7 +72,7 @@ git add --force <file>
 git commit -m "Move files properly to GitLFS"
 ```
 
-### Fix "batch request: missing protocol: ..."
+### Fix Issue "batch request: missing protocol: ..."
 
 ```
 git checkout -f HEAD
