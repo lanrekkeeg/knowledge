@@ -8,7 +8,7 @@ Prerequisites: `kubectl`, `helm`, `minikube`, and `chectl` installed.
 Start a Kubernetes cluster:
 
 ```
-minikube start --cpus 2 --memory 4096 --vm-driver=hyperv --extra-config=apiserver.authorization-mode=RBAC [--kubernetes-version=v1.11.10]
+minikube start --cpus 2 --memory 4096 --vm-driver=hyperv [--kubernetes-version=v1.11.10]
 ```
 
 Prepare cluster:
